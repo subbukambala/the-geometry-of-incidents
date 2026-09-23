@@ -13,10 +13,9 @@ received the update, and processed the affected content could crash. CrowdStrike
 reverted the content at 05:27 UTC; systems coming online afterward were not
 affected by that content release.[^cs-pir]
 
-CrowdStrike's technical RCA describes a mismatch between 21 inputs defined for
-the IPC Template Type and 20 values supplied to the Content Interpreter. A new
-Template Instance exercised the unmatched field, exposed a latent out-of-bounds
-read, and caused a system crash.[^cs-rca]
+CrowdStrike's technical RCA found that the sensor expected 21 data fields but
+supplied only 20. A content update attempted to use the missing field,
+triggering an out-of-bounds memory read and crashing the system.[^cs-rca]
 
 Microsoft estimated that the update affected 8.5 million Windows devices, less
 than one percent of Windows machines, while noting their concentration in
@@ -39,10 +38,10 @@ establish when every already-affected host recovered.
 | Dimension | Evidence-based reading |
 | --- | --- |
 | Breadth | Microsoft estimated 8.5 million affected Windows devices, less than one percent of Windows machines. Sensor version, platform, connectivity, and exposure timing constrained the eligible population.[^ms] |
-| Depth | An affected host could crash and become unable to operate normally. Public sources do not provide a distribution of service-level severity across the organizations using those hosts. |
-| Duration | The content was exposed from 04:09 to 05:27 UTC, a 78-minute window. The cited reports do not provide a complete distribution of host-recovery times.[^cs-pir] |
+| Depth | An affected host could crash and become unable to operate normally. |
+| Duration | The content was exposed from 04:09 to 05:27 UTC, a 78-minute window.[^cs-pir] |
 | Speed | The content path produced abrupt impact across eligible online hosts. The reports support a cliff classification but do not publish a measured time to peak breadth. |
-| Recovery | Withdrawal stopped new exposure, while already-affected hosts required separate remediation. Public 90%, 99%, and complete-recovery timestamps are not available. |
+| Recovery | Withdrawal stopped new exposure, while already-affected hosts required separate remediation. |
 
 ## Incident geometry diagram
 
