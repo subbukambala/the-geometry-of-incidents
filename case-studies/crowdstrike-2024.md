@@ -98,19 +98,6 @@ Recovery: host-by-host, operational, hours or longer
 The defect explains why one host crashed. The distribution and recovery paths
 explain why millions were exposed quickly and why repair took much longer.
 
-## Design questions
-
-- Can content releases be staged by host diversity and operational criticality?
-- Can the endpoint reject invalid content without losing the recovery channel?
-- Does rollback repair affected hosts or only stop new failures?
-- Which semantic host signals automatically stop promotion?
-
-## Controls to test
-
-Canary rings, content-interface validation, fault injection, fail-safe parsing,
-last-known-good content, exposure-rate limits, customer delivery controls, and
-offline recovery automation.
-
 [^cs-pir]: CrowdStrike, [Preliminary Post Incident Review](https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/), July 24, 2024.
 [^cs-rca]: CrowdStrike, [External Technical Root Cause Analysis - Channel File 291](https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf), August 6, 2024.
 [^ms]: Microsoft, [Helping our customers through the CrowdStrike outage](https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/), July 20, 2024.

@@ -69,17 +69,4 @@ global WAF termination.[^cf]
 The rule path could distribute a change globally, but it did not impose a
 comparable exposure boundary on the rule's computational cost.
 
-## Design questions
-
-- Does every production change class use staged exposure?
-- Which resource guardrails automatically stop promotion?
-- Can rollback controls remain available when the data plane is saturated?
-- Does simulation still execute unsafe computational work?
-
-## Controls to test
-
-Staged rule rollout, CPU and latency promotion gates, regular-expression
-complexity checks, automatic rollback, independent administrative access, and
-bounded execution engines.
-
 [^cf]: Cloudflare, [Details of the Cloudflare outage on July 2, 2019](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/), July 12, 2019.

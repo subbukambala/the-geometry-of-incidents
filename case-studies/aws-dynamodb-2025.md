@@ -96,18 +96,4 @@ recovery window exposed coupling that was not visible in the DNS failure alone.
 Outage duration turned into recovery volume: leases expired, repair work became
 runnable at once, and timeouts duplicated unfinished work.
 
-## Design questions
-
-- What state expires while each dependency is unavailable?
-- How large can the resulting repair population become?
-- Does restoration activate repair work simultaneously?
-- Does a timeout cancel underlying work or duplicate it?
-- Do normal requests, repair work, and retries share capacity?
-
-## Controls to test
-
-Bounded recovery debt, staged reconciliation, jitter, deduplication and
-cancellation, retry budgets, reserved recovery capacity, priority classes,
-removal limits, and rehearsed congestive-collapse procedures.
-
 [^aws]: Amazon Web Services, [Summary of the Amazon DynamoDB Service Disruption in the Northern Virginia (US-EAST-1) Region](https://aws.amazon.com/message/101925/), October 2025.

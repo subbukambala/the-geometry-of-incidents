@@ -78,16 +78,4 @@ Failover is a topology transition, not proof of product recovery. The recovery
 definition must include correctness, freshness, derived work, and backlog
 clearance.
 
-## Design questions
-
-- Does failover policy encode write locality and application latency?
-- Can a partition create authority in two sites?
-- Which workflows must pause to preserve integrity?
-- What proves that backlogs, TTLs, and derived systems have recovered?
-
-## Controls to test
-
-Write fencing, topology safety invariants, semantic failover tests, freshness
-SLOs, backlog-aware restoration, TTL monitoring, and end-to-end recovery checks.
-
 [^gh]: GitHub, [October 21 post-incident analysis](https://github.blog/news-insights/company-news/oct21-post-incident-analysis/), October 30, 2018.

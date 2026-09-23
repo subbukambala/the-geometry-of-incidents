@@ -11,6 +11,8 @@ evolves.
 - Tightened the README, framework, and case studies around concrete operational
   claims and direct engineering language
 - Added source-aligned incident-geometry diagrams to all four case studies
+- Removed speculative design-question and control checklists from the case
+  studies
 - Added the project motivation, a related-terminology note, and a five-dimension
   reading of the CrowdStrike case
 
