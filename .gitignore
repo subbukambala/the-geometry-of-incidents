@@ -1,0 +1,21 @@
+.DS_Store
+node_modules/
+.codex-build/
+.codex-finalizer/
+tmp/
+output/
+dist/
+*.key
+*.pptx
+
+# Local drafts retained outside the curated public tree.
+/cases/
+/slides/
+/talk/
+/SOURCES.md
+/LICENSE-CODE
+/LICENSE-CONTENT
+/docs/incident-shapes.md
+/docs/measurement.md
+/templates/case-study.md
+/templates/shape-review.md

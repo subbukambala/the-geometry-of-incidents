@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
+  <title id="title">Incident geometry six-stage flow</title>
+  <desc id="desc">Six connected stages: Origin, Propagation, Amplification, Impact, Containment, and Recovery. TRACER mnemonic letters appear above the stages.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#52606d"/>
+    </marker>
+    <style>
+      .stage { fill: #f7f9fb; stroke: #243b53; stroke-width: 3; rx: 18; }
+      .letter { font: 700 36px system-ui, sans-serif; fill: #0b7285; text-anchor: middle; }
+      .label { font: 700 24px system-ui, sans-serif; fill: #102a43; text-anchor: middle; }
+      .prompt { font: 17px system-ui, sans-serif; fill: #486581; text-anchor: middle; }
+      .arrow { stroke: #52606d; stroke-width: 4; marker-end: url(#arrow); }
+      .caption { font: 600 22px system-ui, sans-serif; fill: #334e68; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1400" height="430" fill="#ffffff"/>
+  <text x="700" y="54" class="caption">Follow the failure from initiating disturbance through complete recovery</text>
+  <g transform="translate(35,105)">
+    <line x1="200" y1="105" x2="235" y2="105" class="arrow"/>
+    <line x1="420" y1="105" x2="455" y2="105" class="arrow"/>
+    <line x1="640" y1="105" x2="675" y2="105" class="arrow"/>
+    <line x1="860" y1="105" x2="895" y2="105" class="arrow"/>
+    <line x1="1080" y1="105" x2="1115" y2="105" class="arrow"/>
+    <g transform="translate(0,0)">
+      <text x="90" y="-20" class="letter">T</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Origin</text><text x="90" y="112" class="prompt">Where did it</text><text x="90" y="137" class="prompt">begin?</text>
+    </g>
+    <g transform="translate(220,0)">
+      <text x="90" y="-20" class="letter">R</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Propagation</text><text x="90" y="112" class="prompt">How did it</text><text x="90" y="137" class="prompt">travel?</text>
+    </g>
+    <g transform="translate(440,0)">
+      <text x="90" y="-20" class="letter">A</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Amplification</text><text x="90" y="112" class="prompt">What made it</text><text x="90" y="137" class="prompt">larger?</text>
+    </g>
+    <g transform="translate(660,0)">
+      <text x="90" y="-20" class="letter">C</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Impact</text><text x="90" y="112" class="prompt">Who experienced</text><text x="90" y="137" class="prompt">it?</text>
+    </g>
+    <g transform="translate(880,0)">
+      <text x="90" y="-20" class="letter">E</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Containment</text><text x="90" y="112" class="prompt">Which boundary</text><text x="90" y="137" class="prompt">held?</text>
+    </g>
+    <g transform="translate(1100,0)">
+      <text x="90" y="-20" class="letter">R</text><rect x="0" y="0" width="180" height="210" class="stage"/>
+      <text x="90" y="76" class="label">Recovery</text><text x="90" y="112" class="prompt">How did health</text><text x="90" y="137" class="prompt">return?</text>
+    </g>
+  </g>
+</svg>

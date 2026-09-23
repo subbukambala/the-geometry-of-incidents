@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use Incident Geometry, please cite this repository and version."
+title: "The Geometry of Incidents"
+type: software
+authors:
+  - family-names: "Kambala"
+    given-names: "Bala Subrahmanyam"
+repository-code: "https://github.com/subbukambala/the-geometry-of-incidents"
+url: "https://github.com/subbukambala/the-geometry-of-incidents"
+license: "CC-BY-4.0"
+version: "0.1.0"
+date-released: "2026-09-22"
+abstract: >-
+  A practitioner framework for connecting user-impact curves to failure
+  propagation, amplification, containment, and recovery in distributed systems.
+keywords:
+  - incident analysis
+  - site reliability engineering
+  - distributed systems
+  - resilience engineering
+  - postmortem

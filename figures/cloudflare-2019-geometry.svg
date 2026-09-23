@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Cloudflare 2019 incident geometry</title>
+  <desc id="desc">A WAF managed rule propagated globally through the rule distribution plane. The regular expression executed in a mandatory request path, exhausted CPU, and caused HTTP 502 errors. Global WAF termination removed the active cost and produced a sharp recovery.</desc>
+  <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4A82D8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#D88943"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C65B57"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4B936B"/>
+    </marker>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .subtitle { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5D6B7E; }
+      .stage { font: 700 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .6px; }
+      .label { font: 700 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .body { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #42536A; }
+      .small { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#FFFFFF"/>
+  <text x="48" y="48" class="title">Cloudflare 2019: global fan-out into a mandatory hot path</text>
+  <text x="48" y="76" class="subtitle">Project interpretation based on the cited operator report; schematic, not a measured time series</text>
+
+  <line x1="128" y1="214" x2="1015" y2="214" stroke="#D8E0EA" stroke-width="3"/>
+
+  <g transform="translate(45 126)">
+    <rect x="18" y="35" width="130" height="105" rx="12" fill="#EEF4FC" stroke="#4A82D8" stroke-width="3"/>
+    <text x="83" y="73" text-anchor="middle" class="small" fill="#4A82D8">WAF RULE</text>
+    <text x="83" y="101" text-anchor="middle" style="font:700 28px ui-monospace, SFMono-Regular, Menlo, monospace; fill:#10233F">.*.*</text>
+    <text x="83" y="155" text-anchor="middle" class="stage" fill="#4A82D8">TRIGGER</text>
+    <text x="83" y="183" text-anchor="middle" class="label">Managed rule</text>
+    <text x="83" y="206" text-anchor="middle" class="body">Pathological expression</text>
+  </g>
+
+  <line x1="194" y1="214" x2="285" y2="214" stroke="#4A82D8" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(270 126)">
+    <circle cx="56" cy="88" r="14" fill="#4A82D8"/>
+    <line x1="68" y1="88" x2="137" y2="48" stroke="#4A82D8" stroke-width="3"/>
+    <line x1="68" y1="88" x2="145" y2="88" stroke="#4A82D8" stroke-width="3"/>
+    <line x1="68" y1="88" x2="137" y2="128" stroke="#4A82D8" stroke-width="3"/>
+    <circle cx="146" cy="43" r="10" fill="#4A82D8"/>
+    <circle cx="154" cy="88" r="10" fill="#4A82D8"/>
+    <circle cx="146" cy="133" r="10" fill="#4A82D8"/>
+    <text x="104" y="155" text-anchor="middle" class="stage" fill="#4A82D8">ROUTE</text>
+    <text x="104" y="183" text-anchor="middle" class="label">Global distribution</text>
+    <text x="104" y="206" text-anchor="middle" class="body">Shared control plane</text>
+  </g>
+
+  <line x1="434" y1="214" x2="515" y2="214" stroke="#D88943" stroke-width="4" marker-end="url(#arrow-orange)"/>
+
+  <g transform="translate(500 126)">
+    <rect x="15" y="39" width="150" height="98" rx="12" fill="#FFF7EC" stroke="#D88943" stroke-width="3"/>
+    <path d="M38 74 H142 M38 101 H142" stroke="#D88943" stroke-width="4"/>
+    <path d="M55 58 L42 74 L55 90 M125 85 L139 101 L125 117" fill="none" stroke="#D88943" stroke-width="3"/>
+    <text x="90" y="155" text-anchor="middle" class="stage" fill="#D88943">AMPLIFICATION</text>
+    <text x="90" y="183" text-anchor="middle" class="label">Mandatory hot path</text>
+    <text x="90" y="206" text-anchor="middle" class="body">Backtracking consumes CPU</text>
+  </g>
+
+  <line x1="665" y1="214" x2="746" y2="214" stroke="#C65B57" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <g transform="translate(730 126)">
+    <circle cx="91" cy="87" r="55" fill="#FCF1F1" stroke="#C65B57" stroke-width="3"/>
+    <path d="M91 87 L91 48" stroke="#C65B57" stroke-width="5" stroke-linecap="round"/>
+    <path d="M91 87 L124 103" stroke="#C65B57" stroke-width="5" stroke-linecap="round"/>
+    <text x="91" y="96" text-anchor="middle" style="font:700 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill:#C65B57">CPU</text>
+    <text x="91" y="168" text-anchor="middle" class="stage" fill="#C65B57">CONSEQUENCE</text>
+    <text x="91" y="196" text-anchor="middle" class="label">CPU exhausted</text>
+    <text x="91" y="219" text-anchor="middle" class="body">HTTP 502 responses</text>
+  </g>
+
+  <g transform="translate(925 120)">
+    <line x1="50" y1="35" x2="50" y2="154" stroke="#10233F" stroke-width="5"/>
+    <line x1="24" y1="57" x2="76" y2="57" stroke="#C65B57" stroke-width="3"/>
+    <line x1="24" y1="91" x2="76" y2="91" stroke="#C65B57" stroke-width="3"/>
+    <line x1="24" y1="125" x2="76" y2="125" stroke="#C65B57" stroke-width="3"/>
+    <text x="50" y="170" text-anchor="middle" class="stage" fill="#10233F">EXTENT</text>
+    <text x="50" y="198" text-anchor="middle" class="label">WAF terminated</text>
+    <text x="50" y="221" text-anchor="middle" class="body">Active cost removed</text>
+  </g>
+
+  <line x1="1002" y1="214" x2="1070" y2="214" stroke="#4B936B" stroke-width="4" marker-end="url(#arrow-green)"/>
+
+  <g transform="translate(1052 126)">
+    <path d="M10 56 L42 100 L78 126" fill="none" stroke="#4B936B" stroke-width="5"/>
+    <circle cx="10" cy="56" r="7" fill="#4B936B"/><circle cx="42" cy="100" r="7" fill="#4B936B"/><circle cx="78" cy="126" r="7" fill="#4B936B"/>
+    <text x="46" y="190" text-anchor="middle" class="stage" fill="#4B936B">RECOVERY</text>
+    <text x="46" y="238" text-anchor="middle" class="label">Sharp recovery</text>
+    <text x="46" y="261" text-anchor="middle" class="body">Traffic and CPU normalized</text>
+  </g>
+
+  <rect x="48" y="414" width="1104" height="72" rx="12" fill="#F4F7FB"/>
+  <text x="72" y="443" class="small" fill="#4A82D8">GEOMETRY REVEALS</text>
+  <text x="72" y="469" class="label">A configuration artifact could execute global computational work without staged exposure.</text>
+</svg>

@@ -1,0 +1,1 @@
+incident_id,operator,incident_date,title,primary_source_url,observable,observable_unit,population,aggregation,breadth,depth,duration,speed,recovery,user_impact_curve,causal_geometries,origin,propagation,amplification,impact_surface,containment,recovery_path,supporting_properties,competing_interpretation,evidence_status,confidence,reviewer,framework_version,notes

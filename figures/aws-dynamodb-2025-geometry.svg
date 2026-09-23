@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">AWS DynamoDB US-EAST-1 2025 incident geometry</title>
+  <desc id="desc">A DNS automation race produced an empty DynamoDB regional endpoint record. New connections failed and EC2 leases expired. When DynamoDB returned, synchronized lease repair, timeouts, and requeued work formed a feedback loop. Engineers used throttling, selective restarts, and queue control to complete recovery.</desc>
+  <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4A82D8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#D88943"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C65B57"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4B936B"/>
+    </marker>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .subtitle { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5D6B7E; }
+      .stage { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .6px; }
+      .label { font: 700 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .body { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #42536A; }
+      .small { font: 600 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="560" fill="#FFFFFF"/>
+  <text x="48" y="48" class="title">AWS DynamoDB 2025: dependency recovery released accumulated work</text>
+  <text x="48" y="76" class="subtitle">US-EAST-1; project interpretation based on the cited AWS post-event summary</text>
+
+  <g transform="translate(55 118)">
+    <rect width="190" height="106" rx="14" fill="#EEF4FC" stroke="#4A82D8" stroke-width="3"/>
+    <text x="18" y="25" class="stage" fill="#4A82D8">TRIGGER</text>
+    <text x="18" y="53" class="label">DNS automation race</text>
+    <text x="18" y="78" class="body">Empty regional endpoint</text>
+    <text x="18" y="98" class="body">record</text>
+  </g>
+  <line x1="245" y1="171" x2="300" y2="171" stroke="#4A82D8" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(305 118)">
+    <rect width="190" height="106" rx="14" fill="#EEF4FC" stroke="#4A82D8" stroke-width="3"/>
+    <text x="18" y="25" class="stage" fill="#4A82D8">ROUTE</text>
+    <text x="18" y="53" class="label">New connections fail</text>
+    <text x="18" y="78" class="body">Customers and internal</text>
+    <text x="18" y="98" class="body">services lose DynamoDB</text>
+  </g>
+  <line x1="495" y1="171" x2="550" y2="171" stroke="#D88943" stroke-width="4" marker-end="url(#arrow-orange)"/>
+
+  <g transform="translate(555 118)">
+    <rect width="190" height="106" rx="14" fill="#FFF7EC" stroke="#D88943" stroke-width="3"/>
+    <text x="18" y="25" class="stage" fill="#D88943">AMPLIFICATION</text>
+    <text x="18" y="53" class="label">Recovery debt grows</text>
+    <text x="18" y="78" class="body">EC2 leases expire while</text>
+    <text x="18" y="98" class="body">the dependency is down</text>
+  </g>
+  <line x1="745" y1="171" x2="800" y2="171" stroke="#C65B57" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <g transform="translate(805 118)">
+    <rect width="190" height="106" rx="14" fill="#FCF1F1" stroke="#C65B57" stroke-width="3"/>
+    <text x="18" y="25" class="stage" fill="#C65B57">CONSEQUENCE</text>
+    <text x="18" y="53" class="label">Dependent workflows fail</text>
+    <text x="18" y="78" class="body">Launches and network</text>
+    <text x="18" y="98" class="body">configuration are delayed</text>
+  </g>
+
+  <g transform="translate(1015 118)">
+    <rect width="130" height="106" rx="14" fill="#F4F7FB" stroke="#10233F" stroke-width="3"/>
+    <text x="18" y="25" class="stage" fill="#10233F">EXTENT</text>
+    <text x="18" y="53" class="label">Regional</text>
+    <text x="18" y="78" class="body">Bounded to</text>
+    <text x="18" y="98" class="body">US-EAST-1</text>
+  </g>
+
+  <text x="55" y="280" class="stage" fill="#D88943">RECOVERY PATH</text>
+  <line x1="55" y1="294" x2="1145" y2="294" stroke="#E2E7EE" stroke-width="2"/>
+
+  <g transform="translate(55 324)">
+    <rect width="200" height="96" rx="14" fill="#F0F8F3" stroke="#4B936B" stroke-width="3"/>
+    <text x="18" y="31" class="label">DynamoDB returns</text>
+    <text x="18" y="57" class="body">Usable by 2:40 AM</text>
+    <text x="18" y="78" class="body">Repair work becomes runnable</text>
+  </g>
+  <line x1="255" y1="372" x2="318" y2="372" stroke="#D88943" stroke-width="4" marker-end="url(#arrow-orange)"/>
+
+  <g transform="translate(323 324)">
+    <rect width="200" height="96" rx="14" fill="#FFF7EC" stroke="#D88943" stroke-width="3"/>
+    <text x="18" y="31" class="label">Synchronized repair</text>
+    <text x="18" y="57" class="body">Large lease population</text>
+    <text x="18" y="78" class="body">re-establishes at once</text>
+  </g>
+  <line x1="523" y1="372" x2="586" y2="372" stroke="#C65B57" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <g transform="translate(591 310)">
+    <rect width="226" height="124" rx="14" fill="#FCF1F1" stroke="#C65B57" stroke-width="3"/>
+    <text x="18" y="32" class="label">Timeout and requeue loop</text>
+    <rect x="20" y="52" width="78" height="38" rx="8" fill="#FFFFFF" stroke="#C65B57" stroke-width="2"/>
+    <rect x="128" y="52" width="78" height="38" rx="8" fill="#FFFFFF" stroke="#C65B57" stroke-width="2"/>
+    <text x="59" y="76" text-anchor="middle" class="small" fill="#C65B57">TIMEOUT</text>
+    <text x="167" y="76" text-anchor="middle" class="small" fill="#C65B57">REQUEUE</text>
+    <path d="M98 71 H124" stroke="#C65B57" stroke-width="3" marker-end="url(#arrow-red)"/>
+    <path d="M167 94 C167 116 59 116 59 94" fill="none" stroke="#C65B57" stroke-width="3" marker-end="url(#arrow-red)"/>
+  </g>
+  <line x1="817" y1="372" x2="880" y2="372" stroke="#4B936B" stroke-width="4" marker-end="url(#arrow-green)"/>
+
+  <g transform="translate(885 324)">
+    <rect width="260" height="96" rx="14" fill="#F0F8F3" stroke="#4B936B" stroke-width="3"/>
+    <text x="18" y="31" class="label">Flow control and drain</text>
+    <text x="18" y="57" class="body">Throttle, selectively restart,</text>
+    <text x="18" y="78" class="body">then clear queues; EC2 1:50 PM</text>
+  </g>
+
+  <rect x="48" y="470" width="1104" height="62" rx="12" fill="#F4F7FB"/>
+  <text x="72" y="497" class="stage" fill="#4A82D8">GEOMETRY REVEALS</text>
+  <text x="250" y="499" class="label">Outage duration became recovery volume, and retries duplicated unfinished work.</text>
+</svg>

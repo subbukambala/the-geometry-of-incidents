@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">CrowdStrike 2024 incident geometry</title>
+  <desc id="desc">A problematic content update traveled through a central content plane to Windows endpoints. Privileged execution caused host crashes. Withdrawing the update stopped new exposure, but affected hosts required local remediation.</desc>
+  <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4A82D8"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4B936B"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#D88943"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C65B57"/>
+    </marker>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .subtitle { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5D6B7E; }
+      .stage { font: 700 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .6px; }
+      .label { font: 700 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .body { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #42536A; }
+      .small { font: 600 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#FFFFFF"/>
+  <text x="48" y="48" class="title">CrowdStrike 2024: automatic fan-out, manual recovery</text>
+  <text x="48" y="76" class="subtitle">Project interpretation based on the cited operator reports; schematic, not a measured time series</text>
+
+  <line x1="120" y1="208" x2="1005" y2="208" stroke="#D8E0EA" stroke-width="3"/>
+
+  <g transform="translate(50 122)">
+    <circle cx="70" cy="86" r="39" fill="#EEF4FC" stroke="#4A82D8" stroke-width="3"/>
+    <path d="M56 73 h28 v26 h-28 z M61 66 h18" fill="none" stroke="#4A82D8" stroke-width="3"/>
+    <text x="70" y="151" text-anchor="middle" class="stage" fill="#4A82D8">TRIGGER</text>
+    <text x="70" y="179" text-anchor="middle" class="label">Content update</text>
+    <text x="70" y="202" text-anchor="middle" class="body">Channel File 291</text>
+  </g>
+
+  <line x1="161" y1="208" x2="271" y2="208" stroke="#4A82D8" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+  <g transform="translate(270 122)">
+    <circle cx="55" cy="86" r="14" fill="#4A82D8"/>
+    <line x1="67" y1="86" x2="123" y2="51" stroke="#4A82D8" stroke-width="3"/>
+    <line x1="67" y1="86" x2="128" y2="86" stroke="#4A82D8" stroke-width="3"/>
+    <line x1="67" y1="86" x2="123" y2="121" stroke="#4A82D8" stroke-width="3"/>
+    <circle cx="132" cy="46" r="9" fill="#4A82D8"/>
+    <circle cx="137" cy="86" r="9" fill="#4A82D8"/>
+    <circle cx="132" cy="126" r="9" fill="#4A82D8"/>
+    <text x="98" y="151" text-anchor="middle" class="stage" fill="#4A82D8">ROUTE</text>
+    <text x="98" y="179" text-anchor="middle" class="label">Central fan-out</text>
+    <text x="98" y="202" text-anchor="middle" class="body">One-to-many distribution</text>
+  </g>
+
+  <line x1="416" y1="208" x2="508" y2="208" stroke="#D88943" stroke-width="4" marker-end="url(#arrow-orange)"/>
+
+  <g transform="translate(496 122)">
+    <rect x="17" y="37" width="128" height="98" rx="10" fill="#FFF7EC" stroke="#D88943" stroke-width="3"/>
+    <path d="M43 111 V64 M68 111 V56 M93 111 V70 M118 111 V51" stroke="#D88943" stroke-width="3"/>
+    <text x="81" y="151" text-anchor="middle" class="stage" fill="#D88943">AMPLIFICATION</text>
+    <text x="81" y="179" text-anchor="middle" class="label">Privileged execution</text>
+    <text x="81" y="202" text-anchor="middle" class="body">Content error becomes a crash</text>
+  </g>
+
+  <line x1="646" y1="208" x2="730" y2="208" stroke="#C65B57" stroke-width="4" marker-end="url(#arrow-red)"/>
+
+  <g transform="translate(710 122)">
+    <rect x="24" y="29" width="144" height="114" rx="12" fill="#FCF1F1" stroke="#C65B57" stroke-width="3"/>
+    <g fill="#C65B57">
+      <circle cx="53" cy="58" r="5"/><circle cx="75" cy="58" r="5"/><circle cx="97" cy="58" r="5"/><circle cx="119" cy="58" r="5"/><circle cx="141" cy="58" r="5"/>
+      <circle cx="53" cy="80" r="5"/><circle cx="75" cy="80" r="5"/><circle cx="97" cy="80" r="5"/><circle cx="119" cy="80" r="5"/><circle cx="141" cy="80" r="5"/>
+      <circle cx="53" cy="102" r="5"/><circle cx="75" cy="102" r="5"/><circle cx="97" cy="102" r="5"/><circle cx="119" cy="102" r="5"/><circle cx="141" cy="102" r="5"/>
+    </g>
+    <text x="96" y="165" text-anchor="middle" class="stage" fill="#C65B57">CONSEQUENCE</text>
+    <text x="96" y="193" text-anchor="middle" class="label">Host crashes</text>
+    <text x="96" y="216" text-anchor="middle" class="body">8.5M device estimate</text>
+  </g>
+
+  <g transform="translate(910 112)">
+    <line x1="45" y1="28" x2="45" y2="154" stroke="#10233F" stroke-width="5"/>
+    <line x1="27" y1="42" x2="63" y2="42" stroke="#4A82D8" stroke-width="2"/>
+    <line x1="27" y1="72" x2="63" y2="72" stroke="#4A82D8" stroke-width="2"/>
+    <line x1="27" y1="102" x2="63" y2="102" stroke="#4A82D8" stroke-width="2"/>
+    <line x1="27" y1="132" x2="63" y2="132" stroke="#4A82D8" stroke-width="2"/>
+    <text x="45" y="176" text-anchor="middle" class="stage" fill="#10233F">EXTENT</text>
+    <text x="45" y="204" text-anchor="middle" class="label">Exposure stopped</text>
+    <text x="45" y="227" text-anchor="middle" class="body">Update withdrawn</text>
+  </g>
+
+  <line x1="979" y1="208" x2="1060" y2="208" stroke="#4B936B" stroke-width="4" marker-end="url(#arrow-green)"/>
+
+  <g transform="translate(1035 122)">
+    <path d="M20 48 L48 61 L76 78 L104 99 L132 113" fill="none" stroke="#4B936B" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>
+    <circle cx="20" cy="48" r="7" fill="#4B936B"/><circle cx="48" cy="61" r="7" fill="#4B936B"/><circle cx="76" cy="78" r="7" fill="#4B936B"/><circle cx="104" cy="99" r="7" fill="#4B936B"/><circle cx="132" cy="113" r="7" fill="#4B936B"/>
+    <text x="76" y="165" text-anchor="middle" class="stage" fill="#4B936B">RECOVERY</text>
+    <text x="76" y="193" text-anchor="middle" class="label">Local remediation</text>
+    <text x="76" y="216" text-anchor="middle" class="body">Host-by-host long tail</text>
+  </g>
+
+  <rect x="48" y="414" width="1104" height="72" rx="12" fill="#F4F7FB"/>
+  <text x="72" y="443" class="small" fill="#4A82D8">GEOMETRY REVEALS</text>
+  <text x="72" y="469" class="label">The distribution path was fast and automatic. The recovery path was local and operational.</text>
+</svg>

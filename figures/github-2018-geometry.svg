@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub 2018 incident geometry</title>
+  <desc id="desc">A schematic shows user impact remaining high after a 43-second network partition. Recovery proceeds through changed database topology, replica synchronization, and backlog clearance. Network restoration is an early milestone, not complete product recovery.</desc>
+  <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
+  <defs>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .subtitle { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #5D6B7E; }
+      .phase { font: 700 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .5px; }
+      .label { font: 700 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #10233F; }
+      .body { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #42536A; }
+      .axis { font: 700 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #6C7888; letter-spacing: .5px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#FFFFFF"/>
+  <text x="48" y="48" class="title">GitHub 2018: network recovery preceded product recovery</text>
+  <text x="48" y="76" class="subtitle">Schematic only; the public report does not provide a complete measured user-impact curve</text>
+
+  <rect x="278" y="116" width="286" height="266" fill="#FFF7EC"/>
+  <rect x="564" y="116" width="278" height="266" fill="#EEF4FC"/>
+  <rect x="842" y="116" width="300" height="266" fill="#F0F8F3"/>
+  <text x="421" y="140" text-anchor="middle" class="phase" fill="#D88943">CHANGED TOPOLOGY</text>
+  <text x="703" y="140" text-anchor="middle" class="phase" fill="#4A82D8">STALE REPLICAS</text>
+  <text x="992" y="140" text-anchor="middle" class="phase" fill="#4B936B">BACKLOG RECOVERY</text>
+
+  <line x1="92" y1="382" x2="1142" y2="382" stroke="#8995A5" stroke-width="2"/>
+  <line x1="92" y1="116" x2="92" y2="382" stroke="#8995A5" stroke-width="2"/>
+  <line x1="92" y1="196" x2="1142" y2="196" stroke="#E4E9F0" stroke-width="1"/>
+  <line x1="92" y1="286" x2="1142" y2="286" stroke="#E4E9F0" stroke-width="1"/>
+  <text x="46" y="202" class="axis">HIGH</text>
+  <text x="53" y="376" class="axis">LOW</text>
+  <text x="1030" y="406" class="axis">TIME</text>
+  <text x="35" y="300" transform="rotate(-90 35 300)" class="axis">USER IMPACT</text>
+
+  <path d="M110 356 L188 356 L188 190 L278 190 L564 224 L564 272 L842 302 L842 338 L1115 366" fill="none" stroke="#10233F" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M110 356 L188 356 L188 190 L278 190" fill="none" stroke="#C65B57" stroke-width="5"/>
+  <path d="M278 190 L564 224" fill="none" stroke="#D88943" stroke-width="5"/>
+  <path d="M564 272 L842 302" fill="none" stroke="#4A82D8" stroke-width="5"/>
+  <path d="M842 338 L1115 366" fill="none" stroke="#4B936B" stroke-width="5"/>
+
+  <line x1="278" y1="116" x2="278" y2="382" stroke="#D88943" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="188" cy="190" r="8" fill="#C65B57"/>
+  <circle cx="278" cy="190" r="8" fill="#D88943"/>
+  <circle cx="564" cy="272" r="8" fill="#4A82D8"/>
+  <circle cx="842" cy="338" r="8" fill="#4B936B"/>
+  <circle cx="1115" cy="366" r="8" fill="#4B936B"/>
+
+  <text x="128" y="174" class="label">Network partition</text>
+  <text x="128" y="158" class="body">Failover changes database authority</text>
+
+  <text x="298" y="174" class="label">Network restored</text>
+  <text x="298" y="194" class="body">after 43 seconds</text>
+
+  <text x="582" y="254" class="label">Primaries restored</text>
+  <text x="582" y="274" class="body">Latency improves; state still divergent</text>
+
+  <text x="860" y="320" class="label">Replicas synchronized</text>
+  <text x="860" y="340" class="body">Topology restored</text>
+
+  <text x="945" y="352" class="label">Backlogs cleared</text>
+  <text x="945" y="372" class="body">Webhooks and Pages complete</text>
+
+  <rect x="48" y="430" width="1104" height="62" rx="12" fill="#F4F7FB"/>
+  <text x="72" y="457" class="phase" fill="#4A82D8">GEOMETRY REVEALS</text>
+  <text x="250" y="459" class="label">Failover changed authority and created recovery work that outlived the partition.</text>
+</svg>
