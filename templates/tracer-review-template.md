@@ -4,7 +4,9 @@
 
 **Review date:**
 
-**Reviewers:**
+**Author:**
+
+**Independent reviewer:**
 
 **Primary sources:**
 

@@ -1,17 +1,23 @@
 # The Geometry of Incidents
 
-**Working framework - version 0.1.0**
+**Turn a production incident into an architecture review - and each finding
+into a resilience test.**
 
-Incident geometry is a review technique for tracing a production failure from
-its point of origin to user impact and recovery. The goal is to explain why the
-impact took the shape it did, using the system's actual dependency paths,
-rollout mechanisms, isolation boundaries, and recovery behavior.
+Incident geometry is an evidence-based review technique for tracing where a
+production failure began, how the architecture carried and amplified it, what
+limited its reach, and why recovery took the shape it did.
 
 > Incidents do not spread randomly. They follow the architecture.
 
-The repository contains the working framework, review templates, four
-source-backed case studies, and a starter corpus. Version 0.1.0 is practitioner
-work. It has not been validated as a predictive taxonomy.
+![Six-stage incident geometry flow: Origin, Propagation, Amplification, Impact, Containment, and Recovery](figures/incident-geometry-overview.svg)
+
+**Start here:** [Try it in 5 minutes](docs/try-it-in-5-minutes.md) ·
+[Run a 30-minute review](docs/getting-started.md) ·
+[Copy the review template](templates/tracer-review-template.md) ·
+[See a completed example](case-studies/crowdstrike-2024.md)
+
+The repository contains the framework, reusable review templates, four
+source-backed case studies, and a starter corpus.
 
 ## Why I built this
 
@@ -21,6 +27,23 @@ connect those patterns to the architectural paths that carried and amplified
 the failure, so a review can lead to a better design question rather than stop
 at a timeline. The motivation and two early examples are described in my
 [WeAreDevelopers article](https://www.wearedevelopers.com/magazine/764-the-geometry-of-incidents-connecting-user-impact-to-architecture).
+
+## Try the idea before adopting the framework
+
+The shortest useful incident-geometry statement has seven lines:
+
+```text
+Observable: What user- or workload-visible quantity changed?
+Origin: Where did the disturbance begin?
+Propagation: Which path carried it?
+Amplification: What made it larger, faster, or persistent?
+Impact and containment: Who experienced it, and which boundary held or failed?
+Recovery: What restored service, correctness, and accumulated work?
+Test: What experiment would verify the proposed protection?
+```
+
+The [5-minute exercise](docs/try-it-in-5-minutes.md) walks through a compact
+CrowdStrike example and then applies these prompts to one of your incidents.
 
 ## 1. What is incident geometry?
 
@@ -106,6 +129,17 @@ When the public record does not support a metric, the field stays unknown.
 
 See [limitations](docs/limitations.md) before applying the framework to research
 or automated classification.
+
+## Project status
+
+Version 0.1.0 is a working practitioner framework. The method and vocabulary
+are ready to use and challenge, but they have not been validated as a
+predictive taxonomy. Independent case studies, classification reviews, and
+counterexamples are especially welcome.
+
+To test the method against a different incident, [propose a case study](https://github.com/subbukambala/the-geometry-of-incidents/issues/new?template=case-study.yml).
+You can author the analysis, review someone else's classification, check its
+sources, or simply suggest a useful case.
 
 ## Citation and license
 

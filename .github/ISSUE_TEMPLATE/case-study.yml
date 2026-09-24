@@ -1,0 +1,59 @@
+name: Propose a case study
+description: Propose a source-backed incident for an independent TRACER analysis
+title: "Case study: "
+labels:
+  - case-study
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test the framework against another incident. A proposal is enough to begin; you do not need to complete the analysis before opening this issue.
+  - type: input
+    id: incident
+    attributes:
+      label: Incident
+      description: Operator, incident name, and absolute date
+      placeholder: "Example: ExampleCo regional database outage, 2025-01-15"
+    validations:
+      required: true
+  - type: input
+    id: primary-source
+    attributes:
+      label: Primary source
+      description: Link to the operator report, status history, or equivalent first-party evidence
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: observable
+    attributes:
+      label: Candidate observable
+      description: What user- or workload-visible quantity could anchor the analysis?
+      placeholder: "Failed checkout attempts per minute across production traffic"
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why this case would test the framework
+      description: Name the propagation, containment, recovery, ambiguity, or counterexample that makes the case useful.
+    validations:
+      required: true
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: How would you like to contribute?
+      options:
+        - Author the case study
+        - Review another author's classification
+        - Check sources and reported facts
+        - Suggest the case only
+    validations:
+      required: true
+  - type: checkboxes
+    id: evidence
+    attributes:
+      label: Evidence standard
+      options:
+        - label: I understand that a completed case must separate reported facts from project interpretation and mark unsupported fields as unknown.
+          required: true
