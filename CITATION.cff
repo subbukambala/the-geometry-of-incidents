@@ -9,7 +9,7 @@ repository-code: "https://github.com/subbukambala/the-geometry-of-incidents"
 url: "https://github.com/subbukambala/the-geometry-of-incidents"
 license: "CC-BY-4.0"
 version: "0.1.0"
-date-released: "2026-09-22"
+date-released: "2026-09-24"
 abstract: >-
   A practitioner framework for connecting user-impact curves to failure
   propagation, amplification, containment, and recovery in distributed systems.

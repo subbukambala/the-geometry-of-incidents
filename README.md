@@ -19,6 +19,9 @@ limited its reach, and why recovery took the shape it did.
 The repository contains the framework, reusable review templates, four
 source-backed case studies, and a starter corpus.
 
+*This is an independent personal project. It is not affiliated with or endorsed
+by my employer or by the organizations discussed in the case studies.*
+
 ## Why I built this
 
 Across hundreds of public postmortems, I kept seeing different root causes
