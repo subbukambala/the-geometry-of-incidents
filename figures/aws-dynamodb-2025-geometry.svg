@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
-  <title id="title">AWS DynamoDB US-EAST-1 2025 incident geometry</title>
+  <title id="title">AWS DynamoDB US-EAST-1 2025 geometry of incidents</title>
   <desc id="desc">A DNS automation race produced an empty DynamoDB regional endpoint record. New connections failed and EC2 leases expired. When DynamoDB returned, synchronized lease repair, timeouts, and requeued work formed a feedback loop. Engineers used throttling, selective restarts, and queue control to complete recovery.</desc>
   <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
   <defs>

@@ -27,9 +27,9 @@ integrity and operation were confirmed.[^gh]
 | Amplification | Divergent writes, replication rebuild, and deferred work |
 | Supporting properties | Recovery asymmetry, authority shift, and freshness/availability divergence |
 
-## Incident geometry diagram
+## Geometry of incidents diagram
 
-![GitHub incident geometry showing high user impact after a brief network partition, followed by recovery phases for changed database topology, stale replicas, and accumulated backlogs](../figures/github-2018-geometry.svg)
+![GitHub geometry of incidents showing high user impact after a brief network partition, followed by recovery phases for changed database topology, stale replicas, and accumulated backlogs](../figures/github-2018-geometry.svg)
 
 The curve is schematic. GitHub's public report provides recovery milestones but
 not a complete user-impact time series.

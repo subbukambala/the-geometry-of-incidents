@@ -1,9 +1,9 @@
-# Incident Geometry Framework
+# The Geometry of Incidents Framework
 
 ## Definition
 
-Incident geometry traces a failure through a distributed system: where it
-started, how it propagated, what amplified it, where users felt it, what
+The geometry of incidents traces a failure through a distributed system: where
+it started, how it propagated, what amplified it, where users felt it, what
 contained it, and how the system recovered.
 
 The method connects two views:
@@ -108,7 +108,7 @@ Every curve must name its observable. A queue-depth slow burn can coexist with
 a cliff in failed user requests; these are different measurements, not a
 classification conflict.
 
-## Minimum incident-geometry statement
+## Minimum Geometry of Incidents statement
 
 A review should be concise enough to summarize like this:
 
@@ -124,7 +124,7 @@ Confidence: High for mechanism, medium for population over time
 
 ## Relationship to existing analysis
 
-Use incident geometry with, rather than instead of:
+Use the Geometry of Incidents alongside:
 
 - **Timelines**, which establish sequence.
 - **Root-cause analysis**, which explains initiating conditions.
@@ -140,10 +140,10 @@ paths, the boundaries observed under stress, and the recovery path.
 The phrase *incident geometry* is also used by Willie Wheeler for a
 [graph-spectral approach to incident propagation](https://williewheeler.com/posts/why-service-topology-constrains-failure-states/).
 That work represents service signals in topology-derived propagation modes.
-This project uses the phrase for a qualitative review method that connects a
-named impact curve to propagation, amplification, containment, and recovery.
-The two approaches share an interest in topology-constrained failure behavior,
-but they answer different operational questions.
+The Geometry of Incidents is a qualitative review method that connects a named
+impact curve to propagation, amplification, containment, and recovery. The two
+approaches share an interest in topology-constrained failure behavior, but they
+answer different operational questions.
 
 ## Review output
 

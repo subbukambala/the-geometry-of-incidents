@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
-  <title id="title">Cloudflare 2019 incident geometry</title>
+  <title id="title">Cloudflare 2019 geometry of incidents</title>
   <desc id="desc">A WAF managed rule propagated globally through the rule distribution plane. The regular expression executed in a mandatory request path, exhausted CPU, and caused HTTP 502 errors. Global WAF termination removed the active cost and produced a sharp recovery.</desc>
   <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
   <defs>

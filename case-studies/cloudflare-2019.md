@@ -22,9 +22,9 @@ reported 27 minutes of impact.[^cf]
 | Amplification | Pathological per-request CPU cost in a mandatory hot path |
 | Supporting properties | Control-plane/data-plane coupling and weak rollout containment |
 
-## Incident geometry diagram
+## Geometry of incidents diagram
 
-![Cloudflare incident geometry showing a managed WAF rule propagating globally, executing in a mandatory request path, exhausting CPU, and recovering sharply after global WAF termination](../figures/cloudflare-2019-geometry.svg)
+![Cloudflare geometry of incidents showing a managed WAF rule propagating globally, executing in a mandatory request path, exhausting CPU, and recovering sharply after global WAF termination](../figures/cloudflare-2019-geometry.svg)
 
 The diagram is a project-authored causal schematic based on Cloudflare's
 incident report. It is not a reconstructed request-error time series.

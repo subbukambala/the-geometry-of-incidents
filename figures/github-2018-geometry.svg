@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub 2018 incident geometry</title>
+  <title id="title">GitHub 2018 geometry of incidents</title>
   <desc id="desc">A schematic shows user impact remaining high after a 43-second network partition. Recovery proceeds through changed database topology, replica synchronization, and backlog clearance. Network restoration is an early milestone, not complete product recovery.</desc>
   <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
   <defs>

@@ -32,9 +32,9 @@ recovery occurred at 1:50 PM PDT.[^aws]
 | Amplification | Expiring leases, accumulated repair work, timeouts, and requeued attempts |
 | Supporting properties | State accumulation, recovery asymmetry, and regional control-plane coupling |
 
-## Incident geometry diagram
+## Geometry of incidents diagram
 
-![AWS DynamoDB 2025 incident geometry showing an empty regional DNS endpoint, failed connections, accumulated lease-repair work, a timeout and requeue feedback loop, and controlled queue drain](../figures/aws-dynamodb-2025-geometry.svg)
+![AWS DynamoDB 2025 geometry of incidents showing an empty regional DNS endpoint, failed connections, accumulated lease-repair work, a timeout and requeue feedback loop, and controlled queue drain](../figures/aws-dynamodb-2025-geometry.svg)
 
 This diagram covers the October 2025 DNS incident. It does not depict the
 September 2015 DynamoDB metadata-service incident used in some conference

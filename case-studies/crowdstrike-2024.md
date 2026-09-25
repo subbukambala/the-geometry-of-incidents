@@ -43,9 +43,9 @@ establish when every already-affected host recovered.
 | Speed | The content path produced abrupt impact across eligible online hosts. The reports support a cliff classification but do not publish a measured time to peak breadth. |
 | Recovery | Withdrawal stopped new exposure, while already-affected hosts required separate remediation. |
 
-## Incident geometry diagram
+## Geometry of incidents diagram
 
-![CrowdStrike incident geometry showing a content update moving through centralized fan-out and privileged execution to Windows host crashes, followed by update withdrawal and a host-by-host recovery tail](../figures/crowdstrike-2024-geometry.svg)
+![CrowdStrike geometry of incidents showing a content update moving through centralized fan-out and privileged execution to Windows host crashes, followed by update withdrawal and a host-by-host recovery tail](../figures/crowdstrike-2024-geometry.svg)
 
 The diagram separates the fast distribution path from the slower remediation
 path. It is a project-authored interpretation of the cited reports.

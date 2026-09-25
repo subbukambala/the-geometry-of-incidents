@@ -3,13 +3,13 @@
 **Turn a production incident into an architecture review - and each finding
 into a resilience test.**
 
-Incident geometry is an evidence-based review technique for tracing where a
-production failure began, how the architecture carried and amplified it, what
-limited its reach, and why recovery took the shape it did.
+The geometry of incidents is an evidence-based review technique for tracing
+where a production failure began, how the architecture carried and amplified
+it, what limited its reach, and why recovery took the shape it did.
 
 > Incidents do not spread randomly. They follow the architecture.
 
-![Six-stage incident geometry flow: Origin, Propagation, Amplification, Impact, Containment, and Recovery](figures/incident-geometry-overview.svg)
+![Six-stage geometry of incidents flow: Origin, Propagation, Amplification, Impact, Containment, and Recovery](figures/incident-geometry-overview.svg)
 
 **Start here:** [Try it in 5 minutes](docs/try-it-in-5-minutes.md) ·
 [Run a 30-minute review](docs/getting-started.md) ·
@@ -25,15 +25,16 @@ by my employer or by the organizations discussed in the case studies.*
 ## Why I built this
 
 Across hundreds of public postmortems, I kept seeing different root causes
-produce familiar impact and recovery patterns. I built incident geometry to
-connect those patterns to the architectural paths that carried and amplified
-the failure, so a review can lead to a better design question rather than stop
-at a timeline. The motivation and two early examples are described in my
+produce familiar impact and recovery patterns. I built the Geometry of
+Incidents method to connect those patterns to the architectural paths that
+carried and amplified the failure, so a review can lead to a better design
+question rather than stop at a timeline. The motivation and two early examples
+are described in my
 [WeAreDevelopers article](https://www.wearedevelopers.com/magazine/764-the-geometry-of-incidents-connecting-user-impact-to-architecture).
 
 ## Try the idea before adopting the framework
 
-The shortest useful incident-geometry statement has seven lines:
+The shortest useful Geometry of Incidents statement has seven lines:
 
 ```text
 Observable: What user- or workload-visible quantity changed?
@@ -48,7 +49,7 @@ Test: What experiment would verify the proposed protection?
 The [5-minute exercise](docs/try-it-in-5-minutes.md) walks through a compact
 CrowdStrike example and then applies these prompts to one of your incidents.
 
-## 1. What is incident geometry?
+## 1. What is the geometry of incidents?
 
 The review follows the failure through six stages:
 
@@ -84,7 +85,7 @@ Each method answers a different question:
 | Timeline | What happened, and when? |
 | Root-cause analysis | What initiated the failure, and why? |
 | Blast radius | How much was affected? |
-| Incident geometry | How did the architecture transform the initiating fault into this pattern of impact and recovery? |
+| Geometry of incidents | How did the architecture transform the initiating fault into this pattern of impact and recovery? |
 
 Use it alongside the timeline and causal analysis. It adds the structural view:
 the paths that carried failure, the mechanisms that enlarged it, the boundaries

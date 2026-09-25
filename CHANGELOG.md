@@ -16,7 +16,7 @@ evolves.
 
 ### Added
 
-- Formal six-stage incident-geometry framework and TRACER mnemonic
+- Formal six-stage Geometry of Incidents framework and TRACER mnemonic
 - Separate vocabularies for user-impact curves and causal geometries
 - Five impact dimensions: breadth, depth, duration, speed, and recovery
 - Thirty-minute adoption guide and reusable review templates
@@ -29,7 +29,7 @@ evolves.
 
 - Tightened the README, framework, and case studies around concrete operational
   claims and direct engineering language
-- Added source-aligned incident-geometry diagrams to all four case studies
+- Added source-aligned Geometry of Incidents diagrams to all four case studies
 - Removed speculative design-question and control checklists from the case
   studies
 - Added the project motivation, a related-terminology note, and a five-dimension

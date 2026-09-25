@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
-  <title id="title">Incident geometry six-stage flow</title>
+  <title id="title">Geometry of incidents six-stage flow</title>
   <desc id="desc">Six connected stages: Origin, Propagation, Amplification, Impact, Containment, and Recovery. TRACER mnemonic letters appear above the stages.</desc>
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">

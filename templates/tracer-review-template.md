@@ -1,4 +1,4 @@
-# [Incident name] - Incident Geometry Review
+# [Incident name] - Geometry of Incidents Review
 
 **Incident date:**
 

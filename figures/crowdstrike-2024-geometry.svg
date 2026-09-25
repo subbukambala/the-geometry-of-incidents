@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
-  <title id="title">CrowdStrike 2024 incident geometry</title>
+  <title id="title">CrowdStrike 2024 geometry of incidents</title>
   <desc id="desc">A problematic content update traveled through a central content plane to Windows endpoints. Privileged execution caused host crashes. Withdrawing the update stopped new exposure, but affected hosts required local remediation.</desc>
   <metadata>Project-authored schematic. Copyright 2026 Bala Subrahmanyam Kambala. Licensed under CC BY 4.0.</metadata>
   <defs>
